@@ -1,7 +1,15 @@
 import re
 def reverse():
-    pat = re.compile('(\W)')  #for string in
-    data = raw_input('')
-    print "".join(x[::-1] for x in pat.split(data))
+    data = raw_input("")
+    temp= [ ]
+    for i in data.split(" "):
+        if re.match('^[a-zA-Z0-9-]+$',i):
+            temp.append(i[::-1])
+        else:
+            pat = re.compile('(\W)')
+            temp.append("".join(x[::-1] for x in pat.split(i)))
+            
+    return " ".join(temp)        
 
-reverse()        
+print reverse()        
+    
