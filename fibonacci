@@ -1,0 +1,17 @@
+def fib(n):
+    li = [1 ,2 ]
+    total =li[0]
+    
+    for i in range(2,n):
+        if i<2:
+            
+            return total
+        else:
+            li.append(li[i-1]+li[i-2])
+            if i%2 ==0:
+                 total = total + li[i]
+                
+        
+    return total
+t = fib(1000)
+print t
