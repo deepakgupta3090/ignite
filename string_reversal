@@ -1,0 +1,7 @@
+import re
+def reverse():
+    pat = re.compile('(\W)')  #for string in
+    data = raw_input('')
+    print "".join(x[::-1] for x in pat.split(data))
+
+reverse()        
