@@ -1,17 +1,21 @@
 def fib(n):
-    li = [1 ,2 ]
-    total =li[0]
-    
-    for i in range(2,n):
-        if i<2:
-            
+    a= 1
+    b=2
+    total =b
+    c = 0
+    if n<2:
             return total
-        else:
-            li.append(li[i-1]+li[i-2])
-            if i%2 ==0:
-                 total = total + li[i]
-                
-        
+    for i in range(2,n):
+       c=a + b
+       if c <= 40000000:
+           a=b
+           b=c
+           if c%2 ==0:
+               total = total + c
+       else:
+           break
+         
     return total
-t = fib(1000)
+t = fib(35)
 print t
+
